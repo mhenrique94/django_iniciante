@@ -5,6 +5,8 @@ README
 
 # Meu guia básico de instalação, configuração e criação do Django framework 4.0 e projeto base teste
 
+Deploy/prévia: http://marcelosilva.pythonanywhere.com
+
 ### Anotações e projeto criados com o conteúdo das aulas práticas do Busertech e:
 
 https://tutorial.djangogirls.org/pt/

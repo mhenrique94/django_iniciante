@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 
 from modulo_viagens import views as viagens_views #tem que renhmear o path da view do novo app para não dar conflito com o path do root
-from . import views
+from teste import views as teste_views
 
 urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls, name='adminpanel'),
-    path('', views.pag_principal, name='index'),
+    path('', teste_views.pag_principal, name='index'),
     path('viagens/', viagens_views.pag_viagens, name='viagens'),
     
 ]

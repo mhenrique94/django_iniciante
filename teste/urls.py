@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from modulo_viagens import views as viagens_views #tem que renhmear o path da view do novo app para não dar conflito com o path do root
-from teste import views as teste_views
+
+from teste import views
 
 urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls, name='adminpanel'),
-    path('', teste_views.pag_principal, name='index'),
-    path('viagens/', viagens_views.pag_viagens, name='viagens'),
+    path('', views.pag_principal, name='index'),
+    path('viagens/', views.pag_viagens, name='viagens'),
     
 ]

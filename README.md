@@ -9,6 +9,8 @@ Para habilitar o ambiente virtual com as dependências:
 ```
 > source venv/bin/activate
 ```
+Link no Docker:
+https://hub.docker.com/repository/docker/mhenrique94/djanbuser
 
 ### Anotações e projeto criados com o conteúdo das aulas práticas do Busertech e:
 

@@ -1,7 +1,19 @@
 {% extends 'index.html' %}
 
+{% block extra_head %}
+    <link rel="stylesheet" href="/static/style.css"/>
+{% endblock %}
+
 {% block content %}
+<h1 class="prox_viagem">Próximas viagens</h1>
     <div class="container-ofertas">
-                <p>OPfertas aqui!!!!!!</p>
+        
+        {% for post in posts %}
+            <div class="viagem_post">
+                {% comment %} <p>Publicado: {{ post.published_date }}</p> {% endcomment %}
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

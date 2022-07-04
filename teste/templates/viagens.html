@@ -7,7 +7,7 @@
         {% for post in posts %}
             <div class="viagem_post">
                 {% comment %} <p>Publicado: {{ post.published_date }}</p> {% endcomment %}
-                <h2><a href="">{{ post.title }}</a></h2>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
         {% endfor %}

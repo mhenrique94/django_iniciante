@@ -1,12 +1,14 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<h1 class="prox_viagem">Próximas viagens</h1>
+<h1 class="h1-body">PRÓXIMAS VIAGENS</h1>
     <div class="container-ofertas">
         
         {% for post in posts %}
             <div class="viagem_post">
-                {% comment %} <p>Publicado: {{ post.published_date }}</p> {% endcomment %}
+                <img src="{{ post.post_image.url }}" class="img-responsive" />
+                <p>Publicado: {{ post.published_date }}</p>
+                <br>
                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>

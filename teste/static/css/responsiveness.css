@@ -6,7 +6,6 @@
     }
     
     .buscador {
-        max-width: 600px;
         max-height: 460px;
         transition: 900ms;
     }
@@ -20,7 +19,6 @@
     }
     
     .buscador {
-        max-width: 600px;
         max-height: 460px;
         transition: 900ms;
     }
@@ -30,7 +28,6 @@
     }
 
     .titulo, .subtitulo {
-        max-width: 600px;
         transition: 900ms;
     }
     .banner {
@@ -39,5 +36,9 @@
         flex-direction: column;
         align-items: center;
         transition: 900ms;
-    }   
+    }
+
+    .form_contato{
+        align-self: flex-start;
+    }
 }

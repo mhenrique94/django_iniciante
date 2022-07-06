@@ -16,8 +16,16 @@
         <div class="cabecalho">
             <img src="https://dals0gb6i1pll.cloudfront.net/img/buser-horizontal-rosa.0109919.svg" alt="logo buser"></a>
             <p> Página fictícia para fins acadêmicos
-                <br>
-            <a href="{% url 'admin:index' %}">Entrar</a>
+            <br>
+            <!-- <a href="{% url 'admin:index' %}">{{request.user.username}}</a>
+            <a href="{% url 'deslogar_usuario'%}" class="login_logout"> Login/Logout
+            </a> -->
+            {% if request.user.is_authenticated%}
+            <a href="{% url 'deslogar_usuario' %}">{{request.user.username}} Logout</a>
+                {%else %}
+            <a href="{% url 'logar_usuario' %}">Login</a>
+            {%endif%}
+            
         </div>
         <div class="scroller">
             {% block content %}

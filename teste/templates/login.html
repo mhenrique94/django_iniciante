@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post">
-    {% csrf_token %}
+{% extends 'index.html' %}
 
-    <div class="form-group">
-        {{form_login.username.errors}}
-        <label>Username: </label>
-        {{form_login.username}}
-    </div>
+{% block content %}
+    
+    <form class="login_form" method="post" >
+        {% csrf_token %}
+        <h4>Digite seu usuário e senha. Caso seja um novo usuário, digite um nome de usuário e senha e clique em "Cadastrar"</h4>
+        <br>
+        <div class="form-group">
+            {{form_login.username.errors}}
+            <label>Nome de Usuário: </label>
+            {{form_login.username}}
+        </div>
 
-    <div class="form-group">
-        {{form_login.password.errors}}
-        <label>Senha: </label>
-        {{form_login.password}}
-    </div>
+        <div class="form-group">
+            {{form_login.password.errors}}
+            <label>Senha: </label>
+            {{form_login.password}}
+        </div>
 
-    <div class="form-group">
-        <input type="submit" value="Enviar" class="btn btn-primary">
-    </div>
-</form>
-</body>
-</html>
+        <div class="form-botoes">
+            <input type="submit" value="Login" class="btn-primary">
+            <input type="submit" value="Cadastrar"class="btn-primary" formaction="{% url 'cadastrar_usuario' %}">
+        </div>
+    </form>
+{% endblock %}

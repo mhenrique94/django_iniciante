@@ -1,36 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro de usuários</title>
-</head>
-<body>
+{% extends 'index.html' %}
 
-<form method="post">
-    {% csrf_token %}
+{% block content %}
 
-    <div class="form-group">
-        {{form_usuario.username.errors}}
-        <label>Username: </label>
-        {{form_usuario.username}}
-    </div>
 
-    <div class="form-group">
-        {{form_usuario.password1.errors}}
-        <label>Senha: </label>
-        {{form_usuario.password1}}
-    </div>
+    <form class="login_form" method="post">
+        {% csrf_token %}
 
-    <div class="form-group">
-        {{form_usuario.password2.errors}}
-        <label>Confirmação de senha: </label>
-        {{form_usuario.password2}}
-    </div>
+        <div class="form-group">
+            {{form_usuario.username.errors}}
+            <label>Nome de usuário: </label>
+            {{form_usuario.username}}
+        </div>
 
-    <div class="form-group">
-        <input type="submit" value="Cadastrar" class="btn btn-primary">
-    </div>
-</form>
+        <div class="form-group">
+            {{form_usuario.password1.errors}}
+            <label>Senha: </label>
+            {{form_usuario.password1}}
+        </div>
 
-</body>
-</html>
+        <div class="form-group">
+            {{form_usuario.password2.errors}}
+            <label>Digite a senha novamente: </label>
+            {{form_usuario.password2}}
+        </div>
+
+        <div class="form-botoes">
+            <input type="submit" value="Cadastrar" class="btn-primary">
+            <input type="submit" value="Ir para login"class="btn-primary" formaction="{% url 'cadastrar_usuario' %}">
+        </div>
+    </form>
+{% endblock %}

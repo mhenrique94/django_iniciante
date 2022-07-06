@@ -259,3 +259,22 @@ button {
     
 }
 
+.login_form{
+    width: 30%;
+    margin: auto;
+    color: whitesmoke;
+}
+
+.form-botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    width: 40%;
+    margin:auto 5%;
+}
+
+.form-botoes a {
+    text-decoration: none;
+}

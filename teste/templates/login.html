@@ -4,7 +4,7 @@
     
     <form class="login_form" method="post" >
         {% csrf_token %}
-        <h4>Digite seu usuário e senha. Caso seja um novo usuário, digite um nome de usuário e senha e clique em "Cadastrar"</h4>
+        <h4>Digite seu usuário e senha. Caso seja um novo usuário clique em "Cadastrar"</h4>
         <br>
         <div class="form-group">
             {{form_login.username.errors}}
@@ -20,7 +20,14 @@
 
         <div class="form-botoes">
             <input type="submit" value="Login" class="btn-primary">
-            <input type="submit" value="Cadastrar"class="btn-primary" formaction="{% url 'cadastrar_usuario' %}">
         </div>
+
+        
     </form>
+    <form class="login_form">
+    <p>Novo por aqui? </p>
+    <div class="form-botoes">
+        <input type="submit" value="Cadastrar"class="btn-primary" formaction="{% url 'cadastrar_usuario' %}">
+    </form>
+    </div>
 {% endblock %}

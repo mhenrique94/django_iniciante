@@ -26,7 +26,21 @@
 
         <div class="form-botoes">
             <input type="submit" value="Cadastrar" class="btn-primary">
-            <input type="submit" value="Ir para login"class="btn-primary" formaction="{% url 'cadastrar_usuario' %}">
+        </div>
+        <br>
+        <p>
+            <li>Sua senha não pode ser muito parecida com o resto das suas informações pessoais.</li>
+            <li>Sua senha precisa conter pelo menos 8 caracteres.</li>
+            <li>Sua senha não pode ser uma senha comumente utilizada.</li>
+            <li>Sua senha não pode ser inteiramente numérica.</li>
+        </p>
+        <br>
+    </form>
+    
+    <form class="login_form">
+        <p>Já possui cadastro? </p>
+        <div class="form-botoes">
+            <input type="submit" value="Ir para Login"class="btn-primary" formaction="{% url 'logar_usuario' %}">
         </div>
     </form>
 {% endblock %}

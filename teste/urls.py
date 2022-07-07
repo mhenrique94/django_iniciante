@@ -29,7 +29,7 @@ urlpatterns = [
     path('cadastrar_usuario/', views.cadastrar_usuario, name="cadastrar_usuario"),
     path('logar_usuario', views.logar_usuario, name="logar_usuario"),
     path('deslogar_usuario', views.deslogar_usuario, name="deslogar_usuario"),
-     path('alterar_senha/', views.alterar_senha, name='alterar_senha'),
+    path('alterar_senha/', views.alterar_senha, name='alterar_senha'),
 ]
 
 if settings.DEBUG:

@@ -12,6 +12,9 @@ Para habilitar o ambiente virtual com as dependências:
 Link no Docker:
 https://hub.docker.com/repository/docker/mhenrique94/djanbuser
 
+Link no Heroku:
+https://teste-buscador.herokuapp.com/
+
 ### Anotações e projeto criados com o conteúdo das aulas práticas do Busertech e:
 
 https://tutorial.djangogirls.org/pt/

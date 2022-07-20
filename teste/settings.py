@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0:8000', 'localhost:8000', '127.0.0.1:8000', 'localhost','djanbuser.busercamp.com.br', '*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

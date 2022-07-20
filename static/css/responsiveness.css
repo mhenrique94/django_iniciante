@@ -1,0 +1,44 @@
+@media (min-width: 521px){
+    .container-busca {
+        height: 70%;
+        transition: 900ms;
+        min-width: 290px;
+    }
+    
+    .buscador {
+        max-height: 460px;
+        transition: 900ms;
+    }
+}
+
+@media (min-width: 800px){
+    .container-busca {
+        height: 75%;
+        align-items: center;
+        transition: 900ms;
+    }
+    
+    .buscador {
+        max-height: 460px;
+        transition: 900ms;
+    }
+
+    .cabecalho {
+        gap: 60%;
+    }
+
+    .titulo, .subtitulo {
+        transition: 900ms;
+    }
+    .banner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 900ms;
+    }
+
+    .form_contato{
+        align-self: flex-start;
+    }
+}
